@@ -1,0 +1,129 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║            SERVIS-HUB - TERMINAL SETUP COMMANDS                       ║
+║                    Platform Manajemen Servis Elektronik               ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════
+📦 1. SETUP AWAL VITE + REACT
+═══════════════════════════════════════════════════════════════════════════
+
+# Buat project baru dengan Vite (jika belum ada)
+npm create vite@latest servis-hub-frontend -- --template react
+
+# Masuk ke folder project
+cd servis-hub-frontend
+
+# Install dependencies dasar
+npm install
+
+
+═══════════════════════════════════════════════════════════════════════════
+📦 2. INSTALL LIBRARY YANG DIBUTUHKAN
+═══════════════════════════════════════════════════════════════════════════
+
+# Install Three.js dan React Three Fiber untuk 3D visualization
+npm install three @react-three/fiber @react-three/drei
+
+# Install React Router DOM untuk routing
+npm install react-router-dom
+
+# Install Axios untuk HTTP requests
+npm install axios
+
+# Install Lucide React untuk icons (optional, sudah include di template)
+npm install lucide-react
+
+
+═══════════════════════════════════════════════════════════════════════════
+🎨 3. SETUP TAILWIND CSS (Optional - jika belum ada)
+═══════════════════════════════════════════════════════════════════════════
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
+═══════════════════════════════════════════════════════════════════════════
+🚀 4. RUN DEVELOPMENT SERVER
+═══════════════════════════════════════════════════════════════════════════
+
+npm run dev
+
+# Aplikasi akan berjalan di:
+# http://localhost:5173
+
+
+═══════════════════════════════════════════════════════════════════════════
+🏗️ 5. BUILD UNTUK PRODUCTION
+═══════════════════════════════════════════════════════════════════════════
+
+npm run build
+
+# Preview production build
+npm run preview
+
+
+═══════════════════════════════════════════════════════════════════════════
+📦 ALTERNATIF - USING YARN
+═══════════════════════════════════════════════════════════════════════════
+
+# Install dependencies
+yarn add three @react-three/fiber @react-three/drei axios react-router-dom
+
+# Run dev server
+yarn dev
+
+# Build production
+yarn build
+
+
+═══════════════════════════════════════════════════════════════════════════
+📦 ALTERNATIF - USING PNPM (Recommended for faster install)
+═══════════════════════════════════════════════════════════════════════════
+
+# Install dependencies
+pnpm add three @react-three/fiber @react-three/drei axios react-router-dom
+
+# Run dev server
+pnpm dev
+
+# Build production
+pnpm build
+
+
+═══════════════════════════════════════════════════════════════════════════
+🔧 TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════════
+
+# Jika ada error dengan node_modules, hapus dan install ulang:
+rm -rf node_modules package-lock.json
+npm install
+
+# Jika port 5173 sudah digunakan, Vite akan auto-assign port lain
+# atau set manual di vite.config.js:
+# server: { port: 3000 }
+
+# Clear cache
+npm cache clean --force
+
+
+═══════════════════════════════════════════════════════════════════════════
+📝 NOTES
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Semua library sudah terinstall di project Figma Make ini
+✅ Struktur folder sudah siap pakai
+✅ Routing RBAC sudah dikonfigurasi
+✅ Mock authentication sudah berfungsi
+✅ DeviceDigitalTwin component ready untuk 3D visualization
+
+🎯 QUICK START:
+1. Buka browser ke http://localhost:5173
+2. Klik "Quick Test Login" untuk demo
+3. Explore 3 role: Customer, Technician, Admin
+
+🚨 IMPORTANT:
+- 3D models (.gltf) perlu ditambahkan ke /public/models/
+- Untuk production, ganti mock data dengan real API calls
+- Integrate Gemini API untuk AI Assistant yang sebenarnya
+
+═══════════════════════════════════════════════════════════════════════════
